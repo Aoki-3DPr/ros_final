@@ -1,4 +1,4 @@
-\# Neuro-Symbolic Autonomous Robot Navigation with Gemini API
+\# Autonomous Robot Navigation with Gemini API
 
 
 
@@ -13,14 +13,11 @@ ROS2 (TurtleBot3) と Google Gemini API を用いた自律探索ロボットシ�
 \## File Structure（ファイル構成）
 
 
-
-\- `llm\_mission\_controller.py`: メインコントローラー（自然言語CLI、ミッション管理、ステータス報告）
-
-\- `llm\_hybrid\_controller.py`: 基底コントローラー（相対マップ、面積閾値BFS、軌跡バックトラック）
-
-\- `Dockerfile`: コンテナ定義
-
-\- `docker-compose.yml`: Docker起動設定
+- `README.md`: システム概要および実行手順書
+- `llm_hybrid_controller.py`: ハイブリッド制御用Pythonスクリプト
+- `run_robot_advanced.py`: メインスクリプト（Gemini API連携、自律探索・移動制御）
+- `docker-compose.yml`: Docker起動設定
+- `Dockerfile`: コンテナ定義
 
 
 
