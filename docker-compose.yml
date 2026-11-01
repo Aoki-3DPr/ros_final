@@ -1,0 +1,18 @@
+services:
+  robot_controller:
+    build: .
+    image: ros2-gemini-controller:latest
+    container_name: llm_robot_node
+
+    network_mode: host
+
+    environment:
+      ROS_DOMAIN_ID: "0"
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?GEMINI_API_KEYを設定してください}
+
+    volumes:
+      - .:/workspace
+
+    working_dir: /workspace
+
+    command: ["python3", "run_robot_advanced.py"]
